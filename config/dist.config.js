@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
 
   entry: {
-    index: './src/HelloWorld.jsx',
+    index: './src/index.jsx',
   },
 
   output: {
