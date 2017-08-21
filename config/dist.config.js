@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const packageName = require('../package.json').name;
 
 module.exports = {
 
@@ -10,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: '[name].js',
-    library: 'react-component-test',
+    library: packageName,
     libraryTarget: 'umd',
   },
 
