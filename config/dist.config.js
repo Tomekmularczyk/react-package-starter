@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const packageName = require('../package.json').name;
 
 module.exports = {
@@ -33,12 +32,17 @@ module.exports = {
   },
 
   resolve: {
-    modules: [
-      "node_modules",
-      "../src",
-    ],
     extensions: ['.js', '.jsx'],
   },
 
-  externals: ["react"],
+  externals: [
+    {
+      'react': {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
+    },
+  ],
 };
