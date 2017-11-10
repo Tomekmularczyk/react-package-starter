@@ -2,6 +2,7 @@
   "name": "npm-react-boilerplate",
   "version": "0.0.1",
   "description": "npm react package boilerplate",
+  "repository": "https://github.com/Tomekmularczyk/react-package-starter",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -18,13 +19,13 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.5.5"
+    "react": "^16.1.0",
+    "webpack": "^3.8.1"
   },
   "peerDependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^16.x.x"
   },
   "babel": {
     "presets": [
