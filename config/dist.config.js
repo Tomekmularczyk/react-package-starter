@@ -1,18 +1,18 @@
-const path = require('path');
-const packageName = require('../package.json').name;
+const path = require('path')
+const packageName = require('../package.json').name
 
 module.exports = (env) => ({
   mode: env.NODE_ENV,
 
   entry: {
-    index: './src/index.jsx',
+    index: './src/index.jsx'
   },
 
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: '[name].js',
     library: packageName,
-    libraryTarget: 'umd',
+    libraryTarget: 'umd'
   },
 
   module: {
@@ -24,8 +24,8 @@ module.exports = (env) => ({
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true,
-            },
+              cacheDirectory: true
+            }
           }
         ]
       }
@@ -33,11 +33,11 @@ module.exports = (env) => ({
   },
 
   optimization: {
-    minimize: false,
+    minimize: false
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
 
   externals: [
@@ -48,6 +48,6 @@ module.exports = (env) => ({
         commonjs: 'react',
         amd: 'react'
       }
-    },
-  ],
-});
+    }
+  ]
+})
