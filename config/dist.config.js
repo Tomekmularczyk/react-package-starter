@@ -1,7 +1,8 @@
 const path = require('path');
 const packageName = require('../package.json').name;
 
-module.exports = {
+module.exports = (env) => ({
+  mode: env.NODE_ENV,
 
   entry: {
     index: './src/index.jsx',
@@ -31,6 +32,10 @@ module.exports = {
     ]
   },
 
+  optimization: {
+    minimize: false,
+  },
+
   resolve: {
     extensions: ['.js', '.jsx'],
   },
@@ -45,4 +50,4 @@ module.exports = {
       }
     },
   ],
-};
+});
