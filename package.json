@@ -4,6 +4,9 @@
   "description": "npm react package boilerplate",
   "repository": "https://github.com/Tomekmularczyk/react-package-starter",
   "main": "lib/index.js",
+  "keywords": [
+    "test"
+  ],
   "files": [
     "lib"
   ],
@@ -12,8 +15,8 @@
     "dev": "webpack --config config/dist.config.js --progress --colors --watch --env.NODE_ENV=development",
     "lint": "standard"
   },
-  "keywords": [
-    "test"
+  "pre-push": [
+    "lint"
   ],
   "author": "Tomek",
   "license": "ISC",
@@ -23,6 +26,7 @@
     "babel-loader": "^7.1.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "pre-push": "^0.1.1",
     "react": "^16.2.0",
     "standard": "^11.0.0",
     "webpack": "^4.1.0",
