@@ -12,7 +12,8 @@ module.exports = (env) => ({
     path: path.resolve(__dirname, '../lib'),
     filename: '[name].js',
     library: packageName,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'this', // https://github.com/webpack/webpack/issues/6642
   },
 
   module: {
