@@ -1,4 +1,4 @@
-###React npm module boilerplate with webpack and babel-preset-env
+### React npm module boilerplate with webpack and babel-preset-env
 
 1. Clone the repo.
 2. Initialize new git repo (`rm -rf .git` and `git init`)
